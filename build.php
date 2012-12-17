@@ -13,13 +13,13 @@ $slidey = new Gregwar\Slidey\Slidey;
  */
 
 // Setting main title prefix
-$slidey->template->mainTitle = 'My show';
+$slidey->template->set('mainTitle', 'My title');
 
 // Adding a CSS stylesheet
 $slidey->template->addCss('css/style.css');
 
 // Including a license in the footer
-$slidey->template->footer = file_get_contents('license.htm');
+$slidey->template->set('footer', file_get_contents('license.htm'));
 
 /**
  * Adding custom directories
