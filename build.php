@@ -21,6 +21,9 @@ $slidey->template->addCss('css/style.css');
 // Including a license in the footer
 $slidey->template->set('footer', file_get_contents('license.htm'));
 
+// Enable the interactive mode
+$slidey->enableInteractive('admin');
+
 /**
  * Adding custom directories
  */
