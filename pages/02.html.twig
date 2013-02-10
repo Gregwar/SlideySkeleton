@@ -27,7 +27,7 @@ elle-même&nbsp;!
 </div>
 
 <div class="slide">
-{{ part('Utilisation basique') }}
+{{ part('Compilation') }}
 <h3>Compilation</h3>
 <p>
     Le fichier <code>build.php</code> sert à expliciter simplement les actions à effectuer pour créer
@@ -69,7 +69,28 @@ cela peut être modifié en donnant un argument à la fonction <code>$slidey->bu
 </div>
 
 <div class="slide">
-{{ part('Ecriture des pages') }}
+<h3>Utilisation de la compilation</h3>
+<p>
+    En exécutant le script <code>build.php</code>, ou à l'aide du <code>Makefile</code> fournit, vous pourrez alors :
+</p>
+<ul>
+    <li class="discover">
+        {{ highlightString('make') }}
+        Lance la compilation et génère le document
+    </li>
+    <li class="discover">
+        {{ highlightString('make clean') }}
+        Détruit la compilation
+    </li>
+    <li class="discover">
+        {{ highlightString('make redo') }}
+        Détruit puis relance la compilation
+    </li>
+</ul>
+</div>
+
+<div class="slide">
+{{ part('Structure des pages') }}
 <h3>Balises</h3>
 <p>
     <b>Slidey</b> utilise les pages du dossier <code>pages/</code> des sources, le fichier <code>index.html.twig</code>
@@ -124,9 +145,13 @@ est lu en premier. Ces pages sont au format HTML, plus quelques balises Twig&nbs
 </div>
 
 <div class="slide">
-<h3>Ecritures de slides</h3>
+{{ part('Pages HTML') }}
 <p>
-    Les slides peuvent être délimitées par l'utilisation de la classe css <code>slide</code>, par exemple&nbsp;:
+    Les pages sont principalement écrites en HTML. Certaines classes CSS sont utilisées par JavaScript pour
+permettre de délimiter les slides et de gérer le contenu hybride support/présentation.
+</p>
+<p>
+    Les slides peuvent être délimitées par l'utilisation de la classe CSS <code>slide</code>, par exemple&nbsp;:
 </p>
 {{ highlightString('<div class="slide">
 Première slide
@@ -150,7 +175,7 @@ Seconde slide
 </div>
 
 <div class="slide">
-<h3>Slides</h3>
+<h3>Navigation et utilisation</h3>
 <p>
     Chaque slide est identifiable à partir du support à l'aide du numéro visible à la droite. 
 </p>
