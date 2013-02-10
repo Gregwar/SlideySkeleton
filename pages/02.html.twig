@@ -1,17 +1,162 @@
-{{ chapter('Chapitre 2', 'chapitre2', 2) }}
+{{ chapter('Utiliser Slidey', 'utilisation', 2) }}
 
 <div class="slide">
-{{ part('Première partie ') }}
-<h3>Présentation</h3>
+{{ part('Téléchargement et installation') }}
 <p>
-    Lorem ipsum sin dolor en almet
+    Le plus simple est de commencer par télécharger le squelette de
+projet Slidey (ou <b>SlideyStandard</b>), qui est en faite cette documentation
+elle-même&nbsp;!
+</p>
+<p>
+    Pour cela, vous pouvez&nbsp;:
+</p>
+<ul>
+    <li><a href="https://github.com/Gregwar/SlideyStandard/archive/master.tar.gz">Télécharger
+    la dernière version (.tar.gz)</li>
+    <li><a href="https://github.com/Gregwar/SlideyStandard/archive/master.zip">Télécharger
+    la dernière version (.zip)</li>
+    <li>Cloner le <a href="https://github.com/Gregwar/SlideyStandard/">dépôt git</a></li>
+    <li>Utiliser composer&nbsp;:</li>
+</ul>
+{{ highlightString('composer create-project gregwar/slidey-standard') }}
+<p>
+    Si vous n'avez pas créé le projet avec composer, n'oubliez pas de l'utiliser pour télécharger les
+    dépendances&nbsp;:
+</p>
+{{ highlightString('composer update') }}
+</div>
+
+<div class="slide">
+{{ part('Utilisation basique') }}
+<h3>Compilation</h3>
+<p>
+    Le fichier <code>build.php</code> sert à expliciter simplement les actions à effectuer pour créer
+le document.
+</p>
+<p>
+    <b>SlideyStandard</b> vous propose également un <code>Makefile</code> très bref, vous pouvez donc 
+compiler la documentation d'exemple en tappant simplement&nbsp;:
+</p>
+{{ highlightString('make') }}
+<p>
+    Le build sera fait dans le dossier <code>web/</code>, ce qui est le comportement par défaut, mais
+cela peut être modifié en donnant un argument à la fonction <code>$slidey->build();</code>.
 </p>
 </div>
 
 <div class="slide">
-{{ part('Deuxième partie') }}
-<h3>Blha</h3>
+<h3>Options du build</h3>
 <p>
-    Lorem ipsum sin dolor en almet
+    Vous pouvez utiliser&nbsp;:
+</p>
+<ul>
+    <li class="discover">
+        {{ highlightString("$slidey->template->set('mainTitle', 'Titre');") }}</code> Personnalise le titre principal de la page
+    </li>
+    <li class="discover">
+        {{ highlightString("$slidey->template->addCss('css/style.css');") }}</code> Ajoute une feuille de style
+    </li>
+    <li class="discover">
+        {{ highlightString("$slidey->template->set('footer', 'Pied de page');") }}</code> Personnalise le pied de page
+    </li>
+    <li class="discover">
+        {{ highlightString("$slidey->copy('css/');") }} Recopie un dossier depuis le dossier des sources vers le dossier du build, ici, le dossier <code>css/</code> sera alors dupliqué dans le build
+    </li>
+    <li class="discover">
+        {{ highlightString("$slidey->build('output/');") }} Lance le build vers le dossier passé en paramètre (ici, <code>output/</code>), qui sera <code>web/</code> par défaut
+    </li>
+</ul>
+</div>
+
+<div class="slide">
+{{ part('Ecriture des pages') }}
+<h3>Balises</h3>
+<p>
+    <b>Slidey</b> utilise les pages du dossier <code>pages/</code> des sources, le fichier <code>index.html.twig</code>
+est lu en premier. Ces pages sont au format HTML, plus quelques balises Twig&nbsp;:
+</p>
+<ul>
+    <li class="discover">
+        {{ highlightString('{{ chapter("Titre", "slug") }}') }}
+        Définit le titre du chapitre courant, et attribut un <em>slug</em> à la page, c'est à dire le nom de la page HTML qu isera générée
+    </li>
+    <li class="discover">
+        {{ highlightString('{{ toc("page1.html.twig", "page2.html.twig") }}') }}
+        Créé une table des matières (Table Of Contents), les pages passées en paramètres seront alors lues récursivement. Elles peuvent elle-même contenir des tables des matières et ainsi de suite.
+    </li>
+    <li class="discover">
+        {{ highlightString('{{ annex("page.html.twig") }}') }}
+        Ajoute une page en annexe, qui sera elle aussi lue (pratique pour les exercices, TDs, etc.)
+    </li>
+</ul>
+</div>
+
+<div class="slide">
+<h3 class="slideOnly">Balises (suite)</h3>
+<p>
+    <b>SlideyStandard</b> vous propose également des fonctionnalités pratiques&nbsp;:
+</p>
+<ul>
+    <li class="discover">
+        {{ highlightString('{{ highlight("files/something.cpp", "cpp) }}') }}
+        Affiche un fichier avec la colorisation syntaxique
+    </li>
+    <li class="discover">
+        {{ highlightString('{{ highlightString("a = 1+1;", "cpp") }}') }}
+        Affiche une chaîne de caractère avec colorisation syntaxique
+    </li>
+    <li class="discover">
+        {{ highlightString('<img src="{{ tex(U_n = \\\\sum_{i=0}^{n} i^n) }}"></a>') }}
+        Affiche une formule LaTeX, voici le rendu&nbsp;:
+        <img src="{{ tex('U_n = \\sum_{i=0}^{n} i^n') }}" />
+    </li>
+</ul>
+</div>
+
+<div class="slide">
+<h3 class="slideOnly">Balises (suite)</h3>
+<ul>
+    <li>
+        {{ highlightString('{{ image("img/image.jpeg").resize("50%").jpeg() }}') }}
+        Affiche une image, et vous permet de la modifier ou d'y accéder, de la redimensionner, etc...
+    </li>
+</ul>
+</div>
+
+<div class="slide">
+<h3>Ecritures de slides</h3>
+<p>
+    Les slides peuvent être délimitées par l'utilisation de la classe css <code>slide</code>, par exemple&nbsp;:
+</p>
+{{ highlightString('<div class="slide">
+Première slide
+</div>
+<div class="slide">
+Seconde slide
+</div>', 'html5') }}
+<p class="discover">
+    Il est également possible d'utiliser les classes suivantes&nbsp;:
+</p>
+<ul class="discover">
+    <li>
+        {{ highlightString('<span class="discover">Hey !</span>') }}
+        Gère l'apparition progressive, tous les éléments ayant la classe <code>discover</code> seront découverts les uns après les autres lors de l'utilisation des flèches (gauche/droite)
+    </li>
+    <li>
+        {{ highlightString('<span class="textOnly">Seulement dans le support</span>') }}
+        Les classes <code>textOnly</code> et <code>slideOnly</code> permettent d'afficher du contenu uniquement dans le support texte ou uniquement dans la slide
+    </li>
+</ul>
+</div>
+
+<div class="slide">
+<h3>Slides</h3>
+<p>
+    Chaque slide est identifiable à partir du support à l'aide du numéro visible à la droite. 
+</p>
+<p>
+    Il est possible de naviguer de slide en slide en utilisant les flèches haut et bas, mais les
+éléments qui se découvrent progressivement ne seront alors pas pris en compte, pour cela, vous
+pouvez utiliser les flèches gauche et droite.
 </p>
 </div>
