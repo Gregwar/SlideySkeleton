@@ -1,0 +1,7 @@
+Slidey
+======
+
+.. toctree::
+
+    introduction
+    utilisation

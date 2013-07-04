@@ -1,6 +1,7 @@
 <?php
 
 include('vendor/autoload.php');
+include('RST/autoload.php');
 
 /**
  * Include here your custom libraries
@@ -12,14 +13,7 @@ $slidey = new Gregwar\Slidey\Slidey;
  * Customizing template
  */
 
-// Setting main title prefix
-$slidey->template->set('mainTitle', 'Slidey Standard');
-
-// Adding a CSS stylesheet
-$slidey->template->addCss('css/style.css');
-
-// Including a license in the footer
-$slidey->template->set('footer', file_get_contents('license.htm'));
+$slidey->addCss('css/style.css');
 
 // Enable the interactive mode
 $slidey->enableInteractive('admin');
