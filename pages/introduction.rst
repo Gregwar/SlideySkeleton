@@ -19,10 +19,11 @@ comparer à `Sphinx <http://sphinx-doc.org/>`_ ou
 * De n'utiliser que des technologies web (HTML, JS, PHP)
 * D'être léger et facile à utiliser
 
-**Slidey** est conçu pour être adapté à la création de support de cours, de
-documentation ou de présentation (conférence...). L'interêt majeur étant d'éviter
-de faire doublon entre le support exhaustif et la présentation faite à l'oral, en utilisant
-un mélange hybride des deux.
+.. textOnly::
+    **Slidey** est conçu pour être adapté à la création de support de cours, de
+    documentation ou de présentation (conférence...). L'interêt majeur étant d'éviter
+    de faire doublon entre le support exhaustif et la présentation faite à l'oral, en utilisant
+    un mélange hybride des deux.
 
 .. slide::
 
