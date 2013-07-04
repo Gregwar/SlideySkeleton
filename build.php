@@ -15,6 +15,9 @@ $slidey = new Gregwar\Slidey\Slidey;
 
 $slidey->addCss('css/style.css');
 
+// Sets the title prefix
+$slidey->setTitle('Slidey');
+
 // Enable the interactive mode
 $slidey->enableInteractive('admin');
 

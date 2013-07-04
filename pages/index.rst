@@ -1,5 +1,5 @@
-Slidey
-======
+Sommaire
+========
 
 .. toctree::
 
