@@ -1,7 +1,6 @@
 <?php
 
 include('vendor/autoload.php');
-include('RST/autoload.php');
 
 /**
  * Include here your custom libraries

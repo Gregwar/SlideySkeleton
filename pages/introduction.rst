@@ -15,6 +15,7 @@ Présentation
 comparer à `Sphinx <http://sphinx-doc.org/>`_ ou 
 `LaTeX <http://www.latex-project.org/>`_ . Le but de ce système est:
 
+.. discoverList::
 * De permettre de mélanger support et slides pour les présentations
 * De n'utiliser que des technologies web (HTML, JS, PHP)
 * D'être léger et facile à utiliser
