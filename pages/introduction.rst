@@ -13,7 +13,7 @@ Présentation
 
 **Slidey** est un outil de génération de documents que l'on pourrait
 comparer à `Sphinx <http://sphinx-doc.org/>`_ ou 
-`LaTeX <http://www.latex-project.org/>`_ . Le but de ce système est:
+`LaTeX <http://www.latex-project.org/>`_. Le but de ce système est:
 
 .. discoverList::
 * De permettre de mélanger support et slides pour les présentations
@@ -33,9 +33,9 @@ comparer à `Sphinx <http://sphinx-doc.org/>`_ ou
 
 **Slidey** se base sur plusieurs bibliothèques, dont :
 
-* `GeSHi <http://qbnz.com/highlighter/>`_ , colorisation syntaxique de code
+* `GeSHi <http://qbnz.com/highlighter/>`_, colorisation syntaxique de code
 * `Gregwar/Tex2png <https://github.com/Gregwar/Tex2png>`_ qui permet d'écrire des formules mathématiques
-* `Gregwar/Image <https://github.com/Gregwar/Image>`_ , bibliothèque de manipulation d'images
+* `Gregwar/Image <https://github.com/Gregwar/Image>`_, bibliothèque de manipulation d'images
 
 .. slide::
 
