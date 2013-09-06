@@ -9,18 +9,18 @@ Utilisation de Slidey
 ----------------------------------
 
 Le plus simple est de commencer par télécharger le squelette de
-projet Slidey (ou **SlideyStandard**), qui est en faite cette documentation
+projet Slidey (ou **SlideySkeleton**), qui est en faite cette documentation
 elle-même~!
 
 Pour cela, vous pouvez~:
 
-* `Télécharger la dernière version (.tar.gz) <https://github.com/Gregwar/SlideyStandard/archive/master.tar.gz>`_
-* `Télécharger la dernière version (.zip) <https://github.com/Gregwar/SlideyStandard/archive/master.zip>`_
-* Cloner le `dépôt git <https://github.com/Gregwar/SlideyStandard/>`_
+* `Télécharger la dernière version (.tar.gz) <https://github.com/Gregwar/SlideySkeleton/archive/master.tar.gz>`_
+* `Télécharger la dernière version (.zip) <https://github.com/Gregwar/SlideySkeleton/archive/master.zip>`_
+* Cloner le `dépôt git <https://github.com/Gregwar/SlideySkeleton/>`_
 * Utiliser composer~:
 
 .. code-block:: txt
-    composer create-project gregwar/slidey-standard
+    composer create-project gregwar/slidey-skeleton
 
 Si vous n'avez pas créé le projet avec composer, n'oubliez pas de l'utiliser pour télécharger les
 dépendances~:
@@ -39,7 +39,7 @@ Compiler
 Le fichier ``build.php`` sert à expliciter simplement les actions à effectuer pour créer
 le document.
 
-**SlideyStandard** vous propose également un ``Makefile`` très bref, vous pouvez donc 
+**SlideySkeleton** vous propose également un ``Makefile`` très bref, vous pouvez donc 
 compiler la documentation d'exemple en tappant simplement~:
 
 .. code-block:: txt

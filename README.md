@@ -1,7 +1,7 @@
-SlideyStandard
+SlideySkeleton
 ==============
 
-The Slidey Standard Edition
+Slidey skeleton project
 
 Installation
 ============
@@ -9,5 +9,5 @@ Installation
 You can create a Slidey project by using composer :
 
 ```
-composer create-project gregwar/slidey-standard
+composer create-project gregwar/slidey-skeleton
 ```

@@ -1,9 +1,9 @@
 {
     "minimum-stability": "dev",
-    "name": "gregwar/slidey-standard",
+    "name": "gregwar/slidey-skeleton",
     "description": "The hybrid document & slide webapp builder",
-    "keywords": ["slidey", "standard"],
-    "homepage": "https://github.com/Gregwar/SlideyStandard",
+    "keywords": ["slidey", "skeleton"],
+    "homepage": "https://github.com/Gregwar/SlideySkeleton",
     "license": "MIT",
     "authors": [
         {
@@ -16,10 +16,10 @@
         "php": ">=5.3.0",
         "gregwar/slidey": "dev-master"
     },
-    "target-dir": "Gregwar/SlideyStandard",
+    "target-dir": "Gregwar/SlideySkeleton",
     "autoload": {
         "psr-0": {
-            "Gregwar\\SlideyStandard": ""
+            "Gregwar\\SlideySkeleton": ""
         }
     }
 }
