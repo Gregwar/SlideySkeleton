@@ -33,9 +33,9 @@ comparer à `Sphinx <http://sphinx-doc.org/>`_ ou
 
 **Slidey** se base sur plusieurs bibliothèques, dont :
 
+* `Gregwar/RST <https://github.com/Gregwar/RST>`_, un parser du langage RST
 * `GeSHi <http://qbnz.com/highlighter/>`_, colorisation syntaxique de code
 * `Gregwar/Tex2png <https://github.com/Gregwar/Tex2png>`_ qui permet d'écrire des formules mathématiques
-* `Gregwar/Image <https://github.com/Gregwar/Image>`_, bibliothèque de manipulation d'images
 
 .. slide::
 
