@@ -12,7 +12,7 @@ Présentation
 ~~~~~~~~~~~~
 
 **Slidey** est un outil de génération de documents que l'on pourrait
-comparer à `Sphinx <http://sphinx-doc.org/>`_ ou 
+comparer à `Sphinx <http://sphinx-doc.org/>`_ ou
 `LaTeX <http://www.latex-project.org/>`_. Le but de ce système est:
 
 .. discoverList::
@@ -34,8 +34,9 @@ comparer à `Sphinx <http://sphinx-doc.org/>`_ ou
 **Slidey** se base sur plusieurs bibliothèques, dont :
 
 * `Gregwar/RST <https://github.com/Gregwar/RST>`_, un parser du langage RST
-* `GeSHi <http://qbnz.com/highlighter/>`_, colorisation syntaxique de code
 * `Gregwar/Tex2png <https://github.com/Gregwar/Tex2png>`_ qui permet d'écrire des formules mathématiques
+* `Bootstrap <http://getbootstrap.com/>`_, pour certaines parties de son graphisme
+* `highlight.js <http://softwaremaniacs.org/soft/highlight/en/>`_ pour sa colorisation syntaxique
 
 .. slide::
 
