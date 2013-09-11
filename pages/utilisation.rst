@@ -1,7 +1,7 @@
 .. slide:: middleSlide
 
-Utilisation de Slidey
-=====================
+Prise en main
+=============
 
 .. slide::
 
