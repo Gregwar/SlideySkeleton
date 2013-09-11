@@ -25,7 +25,7 @@ $slidey->enableInteractive('admin');
  */
 
 // This will copy the directory "css" to the target directory
-$slidey->copy('css', 'css');
+$slidey->copy('css');
 
 // Runs the build to the web directory
 $target = 'web';

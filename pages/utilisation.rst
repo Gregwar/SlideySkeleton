@@ -53,10 +53,20 @@ cela peut être modifié en donnant un argument à la fonction ``$slidey->build(
 Options du build
 ~~~~~~~~~~~~~~~~
 
-Vous pouvez utiliser~:
+Vous pouvez utiliser modifier votre fichier ``build.php`` pour
+personnaliser::
 
-* ``$slidey->addCss('css/style.css');`` Ajoute une feuille de style
-* ``$slidey->copy('css/');`` Recopie un dossier depuis le dossier des sources vers le dossier du build, ici, le dossier ``css/`` sera alors dupliqué dans le build
+    $slidey = new Gregwar\Slidey\Slidey;
+
+    // Ajoute une feuille de style CSS
+    $slidey->addCss('css/style.css');
+
+    // Définit le préfixe du titre
+    $slidey->setTitle('Slidey');
+
+    // Copiera le dossier css de pages/ vers le
+    // dossier du build
+    $slidey->copy('css');
 
 .. slide::
 
