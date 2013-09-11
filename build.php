@@ -25,7 +25,16 @@ $slidey->enableInteractive('admin');
  */
 
 // This will copy the directory "css" to the target directory
-$slidey->copy('css');
+$slidey->copy('css', 'css');
 
 // Runs the build to the web directory
-$slidey->build();
+$target = 'web';
+
+if (count($argv) > 1) {
+    if ($argv[1] == 'clean') {
+        echo "Cleaning $target...\n";
+        `rm -rf $target`;
+        exit(0);
+    }
+}
+$slidey->build($target);
