@@ -19,13 +19,13 @@ Pour cela, vous pouvez :
 * Cloner le `dépôt git <https://github.com/Gregwar/SlideySkeleton/>`_
 * Utiliser composer~:
 
-.. code-block:: txt
+.. code-block:: text
     composer create-project gregwar/slidey-skeleton
 
 Si vous n'avez pas créé le projet avec composer, n'oubliez pas de l'utiliser pour télécharger les
 dépendances :
 
-.. code-block:: txt
+.. code-block:: text
     composer update
 
 .. slide::
@@ -42,7 +42,7 @@ le document.
 **SlideySkeleton** vous propose également un ``Makefile`` très bref, vous pouvez donc 
 compiler la documentation d'exemple en tappant simplement~:
 
-.. code-block:: txt
+.. code-block:: text
     make
 
 Le build sera fait dans le dossier ``web/``, ce qui est le comportement par défaut, mais
@@ -58,15 +58,17 @@ personnaliser::
 
     $slidey = new Gregwar\Slidey\Slidey;
 
-    // Ajoute une feuille de style CSS
-    $slidey->addCss('css/style.css');
-
-    // Définit le préfixe du titre
-    $slidey->setTitle('Slidey');
-
-    // Copiera le dossier css de pages/ vers le
-    // dossier du build
-    $slidey->copy('css');
+    $slidey
+        // Ajoute une feuille de style CSS
+        ->addCss('css/style.css');
+        // Définit le préfixe du titre
+        ->setTitle('Slidey');
+        // Copiera le dossier css de pages/ vers le
+        // dossier du build
+        ->copy('css')
+        // Lance le build
+        ->build()
+        ;
 
 .. slide::
 
