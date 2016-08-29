@@ -14,4 +14,7 @@ You can create a Slidey project by using composer :
 
 ```
 composer create-project gregwar/slidey-skeleton
+cd slidey-skeleton
+make
+firefox web/index.html
 ```
